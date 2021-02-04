@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registration">
+
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="257dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="182dp"
+        android:layout_marginBottom="596dp"
+        android:foregroundGravity="center_vertical|center"
+        android:gravity="center_horizontal"
+        android:shadowColor="@color/black"
+        android:shadowDx="5"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="@string/logo"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="517dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintVertical_bias="0.215" />
+
+    <EditText
+        android:id="@+id/edtfname"
+        android:layout_width="369dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="492dp"
+        android:ems="10"
+        android:hint="Enter First name"
+        android:inputType="textPersonName"
+        android:singleLine="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edtlname"
+        android:layout_width="369dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="432dp"
+        android:ems="10"
+        android:hint="Enter Last name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edtusername"
+        android:layout_width="369dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="372dp"
+        android:ems="10"
+        android:hint="Enter email as Username"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edtpassword"
+        android:layout_width="369dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="22dp"
+        android:ems="10"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/swcbranch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtusername"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Switch
+        android:id="@+id/swcbranch"
+        android:layout_width="231dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="160dp"
+        android:text=" Branch    BCA/MCA"
+        android:textOff="General"
+        android:textOn="BCA/MCA"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtpassword" />
+
+    <RadioGroup
+        android:id="@+id/radiosex"
+        android:layout_width="127dp"
+        android:layout_height="114dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/chkstatus"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/rdomale"
+            android:layout_width="87dp"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_male"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/rdofemale"
+            android:layout_width="108dp"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_female"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/city"
+        android:layout_width="123dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginBottom="6dp"
+        android:entries="@array/array"
+        app:layout_constraintBottom_toTopOf="@+id/chkstatus"
+        app:layout_constraintStart_toEndOf="@+id/radiosex"
+        app:layout_constraintTop_toBottomOf="@+id/swcbranch"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/chkstatus"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="92dp"
+        android:text="ProfileStatus Active/Inactive"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnregistration"
+        android:layout_width="208dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="16dp"
+        android:text="REGISTRSTION ME"
+        android:textSize="18sp"
+        app:backgroundTint="?android:attr/textColorLink"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
